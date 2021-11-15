@@ -1,3 +1,4 @@
+# Declare the empty list
 oneLetter = []
 twoLetter = []
 threeLetter = []
@@ -9,9 +10,15 @@ eightLetter = []
 nineLetter = []
 tenLetter = []
 moreThenLetter = []
+
+# get the user input as a sentence -> convert to lowercase(for standard output) -> split the sentence based on space -> and finally convert string to list
 sentence = list((input("Enter the sentence : ").lower()).split(" "))
+
+# iterate the list
 for word in sentence:
+    # get the length of iteration word
     letter = len(word)
+
     if letter == 1:
         oneLetter.append(word)
     elif letter == 2:
@@ -35,6 +42,7 @@ for word in sentence:
     else:
         moreThenLetter.append(word)
 
+# create new list and add the exciting lists to new list (like list of list) for remove the empty list :)
 masterList = [oneLetter, twoLetter, threeLetter, fourLetter, fiveLetter,
               sixLetter, sevenLetter, eightLetter, nineLetter, tenLetter, moreThenLetter]
 
