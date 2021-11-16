@@ -9,7 +9,7 @@ my @sevenLetter = ();
 my @eightLetter = ();
 my @nineLetter = ();
 my @tenLetter = ();
-my @moreThenLetter = ();
+my @moreThenTenLetter = ();
 
 print "\n Enter the sentence : ";
 chomp($sentence = <STDIN>);
@@ -53,7 +53,7 @@ for my $word (@sentenceList)
         push(@tenLetter, "$word , ");
     }
     else {
-        push(@moreThenLetter,"$word , ")   ;
+        push(@moreThenTenLetter,"$word , ")   ;
     }
 }
 
@@ -67,4 +67,4 @@ print "[ @sevenLetter ]\n";
 print "[ @eightLetter ]\n";
 print "[ @nineLetter ]\n";
 print "[ @tenLetter ]\n";
-print "[ @moreThenLetter ]\n";
+print "[ @moreThenTenLetter ]\n";
