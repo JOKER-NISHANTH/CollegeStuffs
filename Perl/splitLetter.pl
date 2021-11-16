@@ -16,9 +16,9 @@ chomp($sentence = <STDIN>);
 $sentence = lc($sentence);
 
 # using split() function
-my @sentenceList = split(' ', $sentence);
+my @wordList = split(' ', $sentence);
 
-for my $word (@sentenceList)
+for my $word (@wordList)
 {
    $len = length($word);
 
