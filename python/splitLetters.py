@@ -11,7 +11,7 @@ nineLetter = []
 tenLetter = []
 moreThenTenLetter = []
 
-# get the user input as a sentence -> convert to lowercase(for standard output) -> split the sentence based on space -> and finally convert string to list
+# get the input from user as a sentence -> convert to lowercase(for standard output) -> split the sentence based on space -> and finally convert string to list
 sentence = list((input("Enter the sentence : ").lower()).split(" "))
 
 # iterate the list
