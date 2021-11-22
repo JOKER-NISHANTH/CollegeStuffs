@@ -10,5 +10,5 @@ for letter in sentence:
     else:
         count[letter] = 1
 
-print("Count of all characters in "+sentence + " is :\n "
+print("Count of all characters in : " + sentence + " is :\n "
       + str(count))
