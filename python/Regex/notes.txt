@@ -12,3 +12,31 @@ Applications
 * Count the frequency of "training" is preceded by "Dance", "Youtube" etc..
 * Extract data from any PDF
 * Testing mobile number
+
+
+Regular Expression Engines
+
+-> C / C++
+-> Java
+-> JavaScript
+-> .Net
+-> PERl
+-> Python
+-> Ruby
+-> Unix
+-> Apache
+-> MySQL
+
+=> grep , egrep
+
+-> TextMate
+-> Atom
+-> Sublime
+-> Notepad ++
+-> RegexBuddy
+-> RegexMagic
+
+
+https://regexr.com
+https://regex101.com
+https://regexpal.com
