@@ -31,34 +31,31 @@ elsif ($choice == 2){
 	    if ($num < 2){
 
 		$isPrime = 0;
-		
-        
 
-	     }
-	     else{
-	     
+	    }
+	     else {
+
 	        for (my $i=2;$i<=int($num/2);$i++){
 
         	    if($num%$i==0){
 
-			$isPrime = 0;
-
+			        $isPrime = 0;
                         break;
 
             }
         }
     }
-    
+
     if ($isPrime == 0){
         print " Not a prime number ";
     }
-    
-    else{
 
-            	print("Prime number");
+    else{
+    	print("Prime number");
     }
 
 }
-else{
+
+else {
     print "\n Invalid choice , \n please enter correct choice :)"
 }
