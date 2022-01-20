@@ -1,5 +1,3 @@
-from re import M
-from tkinter import E
 
 
 mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
