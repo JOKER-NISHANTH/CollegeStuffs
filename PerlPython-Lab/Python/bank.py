@@ -26,6 +26,7 @@ while(True):
 
     if choice == 'e':
         exit()
+
     amt = float(input("Enter the amount : "))
 
     if choice == 'd':
@@ -33,3 +34,5 @@ while(True):
 
     elif choice == 'w':
         print("Balance after withdraw : ", b.withDraw(amt))
+    else:
+        print("Invalid Option")
