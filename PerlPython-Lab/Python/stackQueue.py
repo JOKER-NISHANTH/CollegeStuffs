@@ -1,5 +1,3 @@
-
-
 def stack():
     stack = []
 
@@ -8,37 +6,36 @@ def stack():
 
     def popit():
         if len(stack) != 0:
-            print(stack.pop(), " is removed stack")
+            print(stack.pop(), " is remove from stack")
 
     def view():
         if len(stack) == 0:
             print("Stack is empty")
         else:
-            print("Element is stack ", stack)
+            print("Element in stack ", stack)
 
     def menu():
-        print("\n Stack Operations")
-        print("--"*10)
-        print("\n 1. Push \n 2. Pop \n 3. Main menu \n 4. Exit")
+        print("Stack operation")
+        print("--" * 15)
+        print("1. Push \n 2. Pop \n 3. Main menu \n 4.Exit")
         ch = int(input("Enter the choice : "))
-        if (ch == 1):
+        if ch == 1:
             pushit()
             view()
             menu()
-
-        elif (ch == 2):
+        elif ch == 2:
             popit()
             view()
             menu()
-
-        elif (ch == 3):
+        elif ch == 3:
             main()
 
-        elif (ch == 4):
+        elif ch == 4:
+
             exit()
 
         else:
-            print("Enter the valid choice ")
+            print("Invalid options ")
             menu()
     menu()
 
@@ -46,57 +43,60 @@ def stack():
 def queue():
     queue = []
 
-    def ins():
+    def insert():
         queue.append(input("Enter the element : "))
 
     def delete():
         if len(queue) != 0:
-            print(queue.pop(0), " is removed from queue")
+            print(queue.pop(0), " is remove from queue")
 
     def view():
         if len(queue) == 0:
             print("Queue is empty")
         else:
-            print("Element is queue : ", queue)
+            print("Element in queue ", queue)
 
     def menu():
-        print("\n Queue Operation")
-        print("--"*10)
-        print("\n 1. Insert \n 2.Delete \n 3. Main menu \n 4.Exit ")
+        print("Queue operation")
+        print("--" * 15)
+        print("1. Insert \n 2. Delete \n 3. Main menu \n 4.Exit")
         ch = int(input("Enter the choice : "))
         if ch == 1:
-            ins()
+            insert()
             view()
             menu()
-
         elif ch == 2:
             delete()
             view()
             menu()
-
         elif ch == 3:
-            menu()
-
+            main()
         elif ch == 4:
             exit()
-
         else:
-            print("Enter the valid choice : ")
+            print("Invalid Options ")
             menu()
     menu()
 
 
 def main():
-    print("\n 1. Stack \n 2. Queue \n 3. Exit")
-    ch = int(input("Enter the choice : "))
-    if ch == 1:
+    print("Stack and Queue Operations")
+    print("--"*15)
+
+    print("\n 1. Stack \n 2. Queue  \n 3. Exit")
+    ch = int(input("Enter your choice : "))
+
+    if (ch == 1):
         stack()
-    elif ch == 2:
+
+    elif(ch == 2):
         queue()
-    elif ch == 3:
+
+    elif(ch == 3):
         exit()
+
     else:
-        print("Enter the valid choice ")
+        print("Invalid choice")
         main()
 
 
