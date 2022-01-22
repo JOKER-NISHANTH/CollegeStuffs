@@ -1,10 +1,10 @@
 def stack():
     stack = []
 
-    def pushit():
+    def pushIt():
         stack.append(input("Enter the element : "))
 
-    def popit():
+    def popIt():
         if len(stack) != 0:
             print(stack.pop(), " is remove from stack")
 
@@ -20,11 +20,11 @@ def stack():
         print("1. Push \n 2. Pop \n 3. Main menu \n 4.Exit")
         ch = int(input("Enter the choice : "))
         if ch == 1:
-            pushit()
+            pushIt()
             view()
             menu()
         elif ch == 2:
-            popit()
+            popIt()
             view()
             menu()
         elif ch == 3:
