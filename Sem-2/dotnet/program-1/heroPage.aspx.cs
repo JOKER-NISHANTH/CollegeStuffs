@@ -21,17 +21,17 @@ protected void submit(object sender, EventArgs e)
     if (expYear <= 2 && jobSelected == "Software Tester")
     {
         Session["msg"] = "You eligible  only for Software Tester Position";
-        Response.Redirect("elegible.aspx");
+        Response.Redirect("eligible.aspx");
     }
     else if ((expYear > 2 && expYear <= 5) && jobSelected == "Full Stack Developer")
     {
         Session["msg"] = "Yup!, You eligible for Software Tester as well as Full Stack Developer Position";
-        Response.Redirect("elegible.aspx");
+        Response.Redirect("eligible.aspx");
     }
     else if (expYear > 5 && jobSelected == "Web Pentester")
     {
         Session["msg"] = "Yeah!, You eligible for Software Tester , Full Stack Developer and Web Pentester Position";
-        Response.Redirect("elegible.aspx");
+        Response.Redirect("eligible.aspx");
     }
 
 

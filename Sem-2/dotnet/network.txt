@@ -1,0 +1,23 @@
+GASC has 700 computers & wants to assign IP addresses starting with 192.168.1.1.
+What will the last IP address?
+
+Class C, Private ip address ranges : 192.168. 0.0 to 192.168. 255.255.
+------------------------------------------------------------------------
+Each Network have 254 host
+
+192.168.1.0     -> Network ID
+192.168.1.255   -> broadcast ID
+254 host
+
+192.168.2.0     -> Network ID
+192.168.2.255   -> broadcast ID
+254 host
+
+-- So for  508 host address available --
+
+Balance 192 host
+192.168.3.0     -> Network ID
+192.168.3.192 [ Last IP address ]
+192.168.3.255   -> broadcast ID
+
+Classless Inter-Domain Routing(CIDR) Notation   192.168.1.0/22
