@@ -1,0 +1,53 @@
+Bill Page
+
+Before Insert into user table
+
+Ensure that table contain total column
+
+MySqlCommand("INSERT INTO user(pid,pname,price,qty,total) VALUES('"+id.Text+"','"+pname.Text+"','"+price.Text+"','"+qty.Text+"',(price * qty))",con);
+
+Note : (price * qty) -> without single and double quotes
+
+		Incase wrongly '"+(price * qty)+"' -> It's Give price is not current context error page
+
+-------------------------
+
+<script runat="server">
+	
+	protected void Page_Load(object sender , EventArgs args) {
+	
+	MySqlConnection con = new MySqlConnection("server=localhost;database=shopcart;userid=root;password=gasc");
+	con.Open();
+	MySqlDataAdapter ad = new MySqlDataAdapter("SELECT pid,pname,price ,sum(qty) as qty ,sum(total) as total FROM user group by pname",con);
+	DataSet ds = new DataSet("user");
+	ad.Fill(ds,"user");
+	gv.DataSource = ds;
+	form1.DataBind();
+	con.Close()
+	
+	MySqlConnection con1 = new MySqlConnection("server=localhost;database=shopcart;userid=root;password=gasc");
+	con1.Open();
+	MySqlCommand  cmd = new MySqlCommand("SELECT sum(total) as total FROM user");
+	cmd.Connection = con1;
+	MySqlDataReader dr;
+	dr = cmd.ExecuteReader();
+	dr.Read();
+	grabdtotal.Text = dr["total"].ToStrin();
+	form1.DataBind();
+	con1.Close();
+	
+	}
+	
+<script>
+
+<asp:GridView id="gv" runat="server" AutoGenerateColumns="False" DataKeyNames="pid" >
+	<Columns>
+		<asp:BoundField DataField="pid" HeaderText="Product ID">
+		.......................................................
+		.......................................................
+		.......................................................
+		.......................................................
+		<asp:BoundField DataField="total" HeaderText="Product ID">
+	</Columns>
+</asp:GridView><br/>
+Grand Total : <asp:Label id="grabdtotal" runat="server">
